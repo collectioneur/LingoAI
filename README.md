@@ -20,6 +20,6 @@ LingoAI is an application that allows you to translate the lyrics of any song in
 If you encounter any issues or have suggestions, feel free to open an issue or contact us directly.
 
 ---
-Made with ❤️ by meю
+Made with ❤️ by me.
 
 
