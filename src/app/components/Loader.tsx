@@ -9,7 +9,6 @@ export default function Loader({ height, width }: LoaderProps) {
   return (
     <RotatingLines
       visible={true}
-      height={height}
       width={width}
       strokeColor="#ffcffd"
       strokeWidth="5"

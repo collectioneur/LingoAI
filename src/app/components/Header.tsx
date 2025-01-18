@@ -10,7 +10,7 @@ import { bagelFatOne } from "../layout";
 
 const Header: React.FC = () => {
   const [openAuth, setOpenAuth] = React.useState(false);
-  let userId = useAuth().userId;
+  const userId = useAuth().userId;
   const auth = getAuth();
   const user = auth.currentUser;
   const router = useRouter();

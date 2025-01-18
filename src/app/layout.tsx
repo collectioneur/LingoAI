@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import { Lexend } from "next/font/google";
 import { AuthProvider } from "./context/authContext";
 import { Bagel_Fat_One } from "next/font/google";
+import { Suspense } from "react";
 
 const lexend = Lexend({
   weight: ["400", "800"],
@@ -23,17 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <AuthProvider>
-      <html lang="en">
-        <head>
-          <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-          <title>LingoAI</title>
-        </head>
-        <body className={lexend.className}>
-          <Background />
-          <Header />
-          {children}
-        </body>
-      </html>
+      <Suspense>
+        <html lang="en">
+          <head>
+            <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+            <title>LingoAI</title>
+          </head>
+          <body className={lexend.className}>
+            <Background />
+            <Header />
+            {children}
+          </body>
+        </html>
+      </Suspense>
     </AuthProvider>
   );
 }

@@ -4,8 +4,8 @@ import * as cheerio from "cheerio";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
-) {
+  { params }: any
+): Promise<NextResponse> {
   const { searchParams } = new URL(req.url);
   const songId = params.id;
   const songUrl = searchParams.get("url");

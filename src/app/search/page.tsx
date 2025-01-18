@@ -1,15 +1,15 @@
 "use client";
-import Hero from "../components/Hero";
-import React from "react";
+
+import React, { Suspense, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
-import SearchResults from "../components/SearchResults";
 import SearchBar from "../components/SearchBar";
+import SearchResults from "../components/SearchResults";
 
 export default function SearchPage() {
   const [fullResults, setFullResults] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState<boolean>(false);
   const searchParams = useSearchParams();
+
   useEffect(() => {
     if (searchParams.has("q")) {
       const query = searchParams.get("q");
